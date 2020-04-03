@@ -15,13 +15,75 @@
     <input type="radio" class="sheet-old sheet-hidden" name="attr_sheet_type3" value="1" /><span></span>
 
     <!--TAB 1 -->
-    <!-- Attributes -->
+    <!-- Basic Info -->
     <div class="sheet-tab-content sheet-tab1">
         <div class="sheet-center">
-            <input type="text" class="sheet-bigname" name="attr_character_name" placeholder="Character Name" /><br> Character Birth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" class="sheet-mediumname" name="attr_character_birth" /><br> Character House:&nbsp;<input
-                type="text" class="sheet-mediumname" name="attr_character_house" />
-        </div>
+            <input type="text" class="sheet-bigname" name="attr_character_name" placeholder="Character Name" />
+    </div>
+    <br>
+        <h3>Character Info</h3>
+        <textarea class="sheet-text" name="attr_CharacterInfo"></textarea>
+        <h3>Blood</h3>
+        <textarea class="sheet-text" name="attr_Blood"></textarea>
+        <h3>House</h3>
+        <textarea class="sheet-text" name="attr_House"></textarea>
+        <h3>Wand</h3>
+        <textarea class="sheet-text" name="attr_Wand"></textarea>
+    </div>
+    <!-- Attributes -->
+    <div class='sheet-col'>
+                <h3 class="sheet-center">Primary Attributes</h3>
+                <table class="sheet-center sheet-black">
+                    <tr>
+                        <td>Simple</td>
+                        <td>Trait</td>
+                        <td>Modifier</td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Strength [[(@{base-Strength}*2) + @{mod-Strength} + 1d10]]">Strength</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Strength" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Strength" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Strength [[@{base-Strength} + @{mod-Strength} + 1d10]]">Difficult</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Dexterity [[(@{base-Dexterity}*2) + @{mod-Dexterity} + 1d10]]">Dexterity</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Dexterity" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Dexterity" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Dexterity [[@{base-Dexterity} + @{mod-Dexterity} + 1d10]]">Difficult</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Charisma [[(@{base-Charisma}*2) + @{mod-Charisma} + 1d10]]">Charisma</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Charisma" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Charismay" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Charisma [[@{base-Charisma} + @{mod-Charisma} + 1d10]]">Difficult</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Constitution [[(@{base-Constitution}*2) + @{mod-Constitution} + 1d10]]">Constitution</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Constitution" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Constitution" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Constitution [[@{base-Constitution} + @{mod-Constitution} + 1d10]]">Difficult</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Intelligence [[(@{base-Intelligence}*2) + @{mod-Intelligence} + 1d10]]">Intelligence</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Intelligence" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Intelligence" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Intelligence [[@{base-Intelligence} + @{mod-Intelligence} + 1d10]]">Difficult</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Perception [[(@{base-Perception}*2) + @{mod-Perception} + 1d10]]">Perception</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Perception" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Perception" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Perception [[@{base-Perception} + @{mod-Perception} + 1d10]]">Difficult</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Willpower [[(@{base-Willpower}*2) + @{mod-Willpower} + 1d10]]">Willpower</button></td>
+                        <td><input type="number" class="sheet-trait" name="attr_base-Willpower" value="0" /></td>
+                        <td><input type="number" class="sheet-trait" name="attr_mod-Willpower" value="0" /></td>
+                        <td><button type='roll' class="sheet-trait_roll" value="/e rolls Willpower [[@{base-Willpower} + @{mod-Willpower} + 1d10]]">Difficult</button></td>
+                    </tr>
+                </table>
+            </div>
+    
         <br>
         <table class="sheet-center sheet-black">
             <tr>
@@ -614,6 +676,7 @@
                             <td><select class="sheet-skill_select" name="attr_WildcardRepeating2_attribute_select" />
                                 <option value="@{base-Strength} + @{mod-Strength}">Str</option>
                                 <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
+                                <option value="@{base-Charisma} + @{mod-Charisma}">Dex/option>
                                 <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
                                 <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
                                 <option value="@{base-Perception} + @{mod-Perception}">Per</option>
@@ -635,6 +698,7 @@
                                 <option value="@{base-Strength} + @{mod-Strength}">Str</option>
                                 <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
                                 <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
+                                <option value="@{base-Charisma} + @{mod-Charisma}">Dex/option>
                                 <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
                                 <option value="@{base-Perception} + @{mod-Perception}">Per</option>
                                 <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
