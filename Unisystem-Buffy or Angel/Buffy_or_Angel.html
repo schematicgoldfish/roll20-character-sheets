@@ -442,7 +442,43 @@
                             <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option></select>
                         </td>
                     </tr>
-                    <!-- Influence -->
+                    <!-- Languages -->
+                     <tr>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Languages} [[(@{Languages_rating}) + @{Languages_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="Languages" disabled="true" name="attr_Languages" />&nbsp;&nbsp;&nbsp;Languages</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_Languages_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_Languages_attribute_select" />
+                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option></select>
+                        </td>
+                    </tr>
+                    <!-- Muggle Technology -->
+                     <tr>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{MuggleTechnology} [[(@{MuggleTechnology_rating}) + @{MuggleTechnology_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="MuggleTechnology" disabled="true" name="attr_MuggleTechnology" />&nbsp;&nbsp;&nbsp;MuggleTechnology</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_MuggleTechnology_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_MuggleTechnology_attribute_select" />
+                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option></select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class='sheet-col'>
+                <table>
+                    <tr>
+                        <td>
+                            <h4>Roll</h4>
+                        </td>
+                        <td>
+                            <h4>Skill</h4>
+                        </td>
+                        <td>
+                            <h4>Rating</h4>
+                        </td>
+                        <th>
+                            <h4>Attribute</h4>
+                        </th>
+                    </tr>
+                   <!-- Influence -->
                     <tr>
                         <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Influence} [[(@{Influence_rating}) + @{Influence_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
                         <td><input type="hidden" class="sheet-textbox" value="Influence" disabled="true" name="attr_Influence" />&nbsp;&nbsp;&nbsp;Influence</td>
@@ -469,172 +505,114 @@
                             <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option></select>
                         </td>
                     </tr>
-                    <!-- Wildcard2 -->
-                    <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Wildcard2} [[(@{Wildcard2_rating}) + @{Wildcard2_attribute_select} + ?{Modifiers|0}+ 1d10]]"></button></td>
-                        <td><input type="text" class="sheet-textbox" value="Wildcard" name="attr_Wildcard2" /></td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Wildcard2_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Wildcard2_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class='sheet-col'>
-                <table>
-                    <tr>
-                        <td>
-                            <h4>Roll</h4>
-                        </td>
-                        <td>
-                            <h4>Skill</h4>
-                        </td>
-                        <td>
-                            <h4>Rating</h4>
-                        </td>
-                        <th>
-                            <h4>Attribute</h4>
-                        </th>
-                    </tr>
-                    <!-- Knowledge -->
-                    <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Knowledge} [[(@{Knowledge_rating}) + @{Knowledge_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Knowledge" disabled="true" name="attr_Knowledge"
-                            />&nbsp;&nbsp;&nbsp;Knowledge</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Knowledge_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Knowledge_attribute_select" />
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
-                        </td>
-                    </tr>
-                    <!-- Kung Fu -->
-                    <tr>
-                        <td></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Kung Fu" disabled="true" name="attr_Kung_Fu"
-                            />&nbsp;&nbsp;&nbsp;Kung Fu</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Kung_Fu_rating" value="0" /></td>
-                        <td></td>
-                    </tr>
-                    <!-- Languages -->
-                    <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Languages} [[(@{Languages_rating}) + @{Languages_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Languages" disabled="true" name="attr_Languages"
-                            />&nbsp;&nbsp;&nbsp;Languages</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Languages_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Languages_attribute_select" />
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
-                        </td>
-                    </tr>
-                    <!-- Mr Fix It -->
-                    <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Mr_Fix_It} [[(@{Mr_Fix_It_rating}) + @{Mr_Fix_It_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Mr Fix It" disabled="true" name="attr_Mr_Fix_It"
-                            />&nbsp;&nbsp;&nbsp;Mr Fix It</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Mr_Fix_It_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Mr_Fix_It_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
-                        </td>
-                    </tr>
                     <!-- Notice -->
                     <tr>
                         <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Notice} [[(@{Notice_rating}) + @{Notice_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="Hidden" class="sheet-textbox" value="Notice" disabled="true" name="attr_Notice"
+                        <td><input type="hidden" class="sheet-textbox" value="Notice" disabled="true" name="attr_Notice"
                             />&nbsp;&nbsp;&nbsp;Notice</td>
                         <td><input type="number" class="sheet-numberbox" name="attr_Notice_rating" value="0" /></td>
                         <td><select class="sheet-skill_select" name="attr_Notice_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
+                            <option value="@{base-Perception} + @{mod-Perception}">Per</option></select>
                         </td>
                     </tr>
-                    <!-- Occultism -->
+                    <!-- Potions -->
                     <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Occultism} [[(@{Occultism_rating}) + @{Occultism_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Occultism" disabled="true" name="attr_Occultism"
-                            />&nbsp;&nbsp;&nbsp;Occultism</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Occultism_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Occultism_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Potions} [[(@{Potions_rating}) + @{Potions_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="Potions" disabled="true" name="attr_Potions"
+                            />&nbsp;&nbsp;&nbsp;Potions</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_Potions_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_Potions_attribute_select" />
+                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option></select>
                         </td>
                     </tr>
-                    <!-- Science -->
-                    <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Science} [[(@{Science_rating}) + @{Science_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Science" disabled="true" name="attr_Science"
-                            />&nbsp;&nbsp;&nbsp;Science</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Science_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Science_attribute_select" />
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
-                        </td>
-                    </tr>
-                    <!-- Sports -->
+                     <!-- Sports -->
                     <tr>
                         <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Sports} [[(@{Sports_rating}) + @{Sports_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
                         <td><input type="hidden" class="sheet-textbox" value="Sports" disabled="true" name="attr_Sports"
                             />&nbsp;&nbsp;&nbsp;Sports</td>
                         <td><input type="number" class="sheet-numberbox" name="attr_Sports_rating" value="0" /></td>
                         <td><select class="sheet-skill_select" name="attr_Sports_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
+                            <option value="@{base-Strength} + @{mod-Strength}">Str</option></select>
                         </td>
                     </tr>
-                    <!-- Wildcard1 -->
+                    <!-- Transfiguration -->
                     <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Wildcard1} [[(@{Wildcard1_rating}) + @{Wildcard1_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="text" class="sheet-textbox" value="Wildcard" name="attr_Wildcard1" /></td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Wildcard1_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Wildcard1_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
-                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
-                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
-                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Transfiguration} [[(@{Transfiguration_rating}) + @{Transfiguration_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="Transfiguration" disabled="true" name="attr_Transfiguration"
+                            />&nbsp;&nbsp;&nbsp;Transfiguration</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_Transfiguration_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_Transfiguration_attribute_select" />
+                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option></select>
                         </td>
                     </tr>
-                    <!-- Wildcard3 -->
+                    <!-- Wand Fu -->
                     <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Wildcard3} [[(@{Wildcard3_rating}) + @{Wildcard3_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="text" class="sheet-textbox" value="Wildcard" name="attr_Wildcard3" /></td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Wildcard3_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Wildcard3_attribute_select" />
-                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{WandFu} [[(@{WandFu_rating}) + @{WandFu_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="Hidden" class="sheet-textbox" value="WandFu" disabled="true" name="attr_WandFu"
+                            />&nbsp;&nbsp;&nbsp;WandFu</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_WandFu_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_WandFu_attribute_select" />
+                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option></select>
+                        </td>
+                    </tr>
+                    <!-- Wizardy&Witchcraft -->
+                     <tr>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Wizardry} [[(@{Wizardry_rating}) + @{Wizardry_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="Hidden" class="sheet-textbox" value="Wizardry&Witchcraft" disabled="true" name="attr_Wizardry"
+                            />&nbsp;&nbsp;&nbsp;Wizardry</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_Wizardry_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_Wizardry_attribute_select" />
+                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option></select>
+                        </td>
+                    </tr>
+                    <!-- Wild Card 1 -->
+                    <tr>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{WC1} [[(@{WC1_rating}) + @{WC1_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="Wild Card 1" disabled="true" name="attr_WC1"
+                            />&nbsp;&nbsp;&nbsp;WC1</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_WC1_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_WC1_attribute_select" />
                             <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
+                            <option value="@{base-Charisma} + @{mod-Charisma}">Cha</option>
                             <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
                             <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
                             <option value="@{base-Perception} + @{mod-Perception}">Per</option>
+                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
                             <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
                         </td>
                     </tr>
+                   <!-- Wild Card 2 -->
+                   <tr>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{WC2} [[(@{WC2_rating}) + @{WC2_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="Wild Card 2" disabled="true" name="attr_WC2"
+                            />&nbsp;&nbsp;&nbsp;WC2</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_WC2_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_WC2_attribute_select" />
+                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
+                            <option value="@{base-Charisma} + @{mod-Charisma}">Cha</option>
+                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
+                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
+                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
+                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
+                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
+                        </td>
+                    </tr>
+                   <!-- Wild Card 3 -->
+                    <tr>
+                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{WC3} [[(@{WC3_rating}) + @{WC3_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
+                        <td><input type="hidden" class="sheet-textbox" value="Wild Card 3" disabled="true" name="attr_WC3"
+                            />&nbsp;&nbsp;&nbsp;WC3</td>
+                        <td><input type="number" class="sheet-numberbox" name="attr_WC3_rating" value="0" /></td>
+                        <td><select class="sheet-skill_select" name="attr_WC3_attribute_select" />
+                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option>
+                            <option value="@{base-Charisma} + @{mod-Charisma}">Cha</option>
+                            <option value="@{base-Constitution} + @{mod-Constitution}">Con</option>
+                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option>
+                            <option value="@{base-Perception} + @{mod-Perception}">Per</option>
+                            <option value="@{base-Strength} + @{mod-Strength}">Str</option>
+                            <option value="@{base-Willpower} + @{mod-Willpower}">Will</option>
+                        </td>
+</tr>
                 </table>
             </div>
 
