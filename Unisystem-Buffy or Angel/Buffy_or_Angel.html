@@ -442,24 +442,6 @@
                             <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option></select>
                         </td>
                     </tr>
-                    <!-- Languages -->
-                     <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{Languages} [[(@{Languages_rating}) + @{Languages_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="Languages" disabled="true" name="attr_Languages" />&nbsp;&nbsp;&nbsp;Languages</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_Languages_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_Languages_attribute_select" />
-                            <option value="@{base-Intelligence} + @{mod-Intelligence}">Int</option></select>
-                        </td>
-                    </tr>
-                    <!-- Muggle Technology -->
-                     <tr>
-                        <td><button type='roll' class="sheet-skillbutton" value="/e rolls @{MuggleTechnology} [[(@{MuggleTechnology_rating}) + @{MuggleTechnology_attribute_select} + ?{Modifiers|0} + 1d10]]"></button></td>
-                        <td><input type="hidden" class="sheet-textbox" value="MuggleTechnology" disabled="true" name="attr_MuggleTechnology" />&nbsp;&nbsp;&nbsp;MuggleTechnology</td>
-                        <td><input type="number" class="sheet-numberbox" name="attr_MuggleTechnology_rating" value="0" /></td>
-                        <td><select class="sheet-skill_select" name="attr_MuggleTechnology_attribute_select" />
-                            <option value="@{base-Dexterity} + @{mod-Dexterity}">Dex</option></select>
-                        </td>
-                    </tr>
                 </table>
             </div>
             <div class='sheet-col'>
